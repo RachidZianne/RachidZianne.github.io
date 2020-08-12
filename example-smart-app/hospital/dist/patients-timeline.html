@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Mooli | Doctors Profile</title>
+<title>Mooli | Patient Profile</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -290,7 +290,7 @@
                     </div>
                     <div class="dropdown">
                         <span>Welcome</span>
-                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Dr. Alan Green</strong></a>
+                        <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong><td id='fname'></td><td id='lname'></td></strong></a>
                         <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
                             <li><a href="dr-profile.html"><i class="fa fa-user"></i>My Profile</a></li>
                             <li><a href="app-inbox.html"><i class="fa fa-envelope"></i>Messages</a></li>
@@ -723,18 +723,18 @@
                                 </ul>
                             </div>
                             <div class="body">
-                                <small class="text-muted">Degree: </small>
-                                <p>MBBS,MD</p>
-                                <small class="text-muted">Designation: </small>
-                                <p>Gynaecologist</p>
-                                <small class="text-muted">Email address: </small>
-                                <p>michael@gmail.com</p>
-                                <small class="text-muted">Mobile: </small>
-                                <p>+ 202-555-2828</p>
-                                <small class="text-muted">Address: </small>
-                                <p>795 Folsom Ave, Suite 600 San Francisco, 94107</p>
+                                <small class="text-muted">Gender: </small>
+                                <p><td id='gender'></td></p>
+                                <small class="text-muted">Date of Birth: </small>
+                                <p><td id='birthdate'></td></p>
+                                <small class="text-muted">Height:</small>
+                                <p><td id='height'></td></p>
+                                <small class="text-muted">Systolic Blood Pressure: </small>
+                                <p><td id='systolicbp'></td></p>
+                                <small class="text-muted">Diastolic Blood Pressure: </small>
+                                <p><td id='diastolicbp'></td></p>
                                 <hr>
-                                <small class="text-muted">Social: </small>
+                                <small class="text-muted">LDL:</small>
                                 <p><i class="fa fa-twitter m-r-5"></i> twitter.com/example</p>
                                 <p><i class="fa fa-facebook  m-r-5"></i> facebook.com/example</p>
                                 <p><i class="fa fa-github m-r-5"></i> github.com/example</p>
@@ -1646,6 +1646,10 @@
 <!-- Project core js file minify with grunt --> 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
 <script src="../js/pages/forms/dropify.js"></script>
+ <!-- Application-level javascript-->
+ <script src='./src/js/example-smart-app.js'></script>
+ <!-- FHIR Client JS Library -->
+ <script src='./lib/js/fhir-client-v0.1.12.js'></script>
 <script>
     extractData().then(
       //Display Patient Demographics and Observations if extractData was success
