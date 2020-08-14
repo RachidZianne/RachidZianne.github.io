@@ -1627,14 +1627,7 @@
         
     </div>
 </div>
-<!----FHR javascript start code ---->
-<!-- Application-level javascript-->
-<script src='./src/js/example-smart-app.js'></script>
 
-<!-- FHIR Client JS Library -->
-<script src='./lib/js/fhir-client-v0.1.12.js'></script>
-
-<!----FHR javascript end code -->
 <!-- Javascript -->
 <script src="assets/bundles/libscripts.bundle.js"></script>    
 <script src="assets/bundles/vendorscripts.bundle.js"></script>
@@ -1646,19 +1639,5 @@
 <!-- Project core js file minify with grunt --> 
 <script src="assets/bundles/mainscripts.bundle.js"></script>
 <script src="../js/pages/forms/dropify.js"></script>
-<script>
-    extractData().then(
-      //Display Patient Demographics and Observations if extractData was success
-      function(p) {
-        drawVisualization(p);
-      },
-
-      //Display 'Failed to call FHIR Service' if extractData failed
-      function() {
-        $('#loading').hide();
-        $('#errors').html('<p> Failed to call FHIR Service </p>');
-      }
-    );
-  </script>
 </body>
 </html>
